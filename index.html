@@ -2,184 +2,110 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-<style>
-* {box-sizing: border-box;}
-
-body { 
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.header {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
-}
-
-.header a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
-}
-
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.header a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
-.header-right {
-  float: right;
-}
-
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
-}
-</style>
-  
-  
 <style>
 * {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
 
-/* Style the tab */
-.tab {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 10%;
-  min-width: 100px;
-  height: 300px;
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
 }
 
-/* Style the buttons inside the tab */
-.tab button {
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: 1px solid #AAA;
   outline: none;
-  text-align: left;
   cursor: pointer;
-  transition: 0.3s;
+  padding: 14px 16px;
   font-size: 17px;
+  width: 25%;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
+.tablink:hover {
+  background-color: #777;
 }
 
-/* Create an active/current "tab button" class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
+/* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid #ccc;
-  width: 90%;
-  border-left: none;
-  height: 300px;
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
 }
+
+
+.header a.logo {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 14px 16px;
+}
+
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
 </style>
-  
-  
-</head>
-<body>
+
+
+
+
 
 <div class="header">
-  <a href="#default" class="logo">SpaceShipChase - Blog, Wiki, Brain Dump</a>
-  <div class="header-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+  <a class="logo">SpaceShipChase - Tech Blog and Wiki</a>
   </div>
 </div>
 
-      <!--  merp 
-<div style="padding-left:20px">
-  <h1>Some content. </h1>
-  <p>Some content..</p>
-</div>
--->
-  
-    <!--  merp 
-<h2>Vertical Tabs</h2>
-<p>Click on the buttons inside the tabbed menu:</p>
--->
-  
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Blog</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Technical Wiki</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Videos</button>
+
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'green')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" >News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'green')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'green')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
 </div>
 
-<div id="London" class="tabcontent">
-  <h3>Tecnical Blog Articles</h3>
-  <p>List of articles.</p>
- <p> https://github.com/IBM/cloud-native-starter </p>
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
 </div>
 
-<div id="Paris" class="tabcontent">
-  <h3>Technical Wiki</h3>
-  <p>Github docs.</p> 
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
 </div>
 
-<div id="Tokyo" class="tabcontent">
-  <h3>Videos</h3>
-  <p>Watch em.</p>
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
 </div>
 
 <script>
-function openCity(evt, cityName) {
+function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablinks");
+  tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].style.backgroundColor = "";
   }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
 }
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-  
-  <!--  merp -->
-  
-  
-
+   
 </body>
-</html>
+</html> 
