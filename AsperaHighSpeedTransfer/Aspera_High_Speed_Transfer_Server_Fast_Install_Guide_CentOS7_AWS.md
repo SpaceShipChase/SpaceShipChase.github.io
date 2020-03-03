@@ -34,6 +34,8 @@ You can also point the HSTS to store data in S3 or another storage option. Guide
 
 ## Step 3 - Configure SSH access, firewall, change SSH port, disable SELinux, restart.
 
+SSH into your VM.
+
 Firewall and ssh config.
 ```console
 systemctl enable firewalld
@@ -56,6 +58,112 @@ Disable SELinux and restart (this is a quick and dirty install).
 sed -i 's/SELINUX=permissive/SELINUX=disabled/' /etc/selinux/config
 sudo shutdown -r now
 ```
+
+Verify SELinux status, fiirewall config, and listening ports:
+```console
+sestatus
+firewall-cmd --list-all
+ss -l | grep 33001
+```
+
+## Step 4 - Install and load the license.
+
+Transfer the installer and the license to the VM. I like scp.
+
+Put the installer anywhere convenient for you.
+
+Put the license file in the same directory, you will be moving it after the install.
+
+My commands looked like the below
+```console
+scp -P 33001 /<source file path> <your_user>@<IP>:/<file destination>
+```
+
+SSH back into the VM and install.
+>NOTE: Some systems may not have two perl pre requisites. Check and see if
+they are on your system and install them if they are not there:
+>```console
+>yum install perl-Digest-MD5
+>yum install perl-Data-Dumper
+>```
+
+Install:
+```console
+yum --nogpgcheck install /<path to installer>
+```
+
+Move the license into the /opt/aspera/etc directory and name it aspera-license.
+```console
+cp /<path to your license> /opt/aspera/etc/aspera-license
+```
+
+Load the license.
+```console
+ascp -A
+```
+
+You will see you license number and some server info displayed. Good job so far.
+
+
+## Step 5 - Prepare for Watch Folders - They are cool and you'll want to play with them anyways.
+
+Create Node API User - this creates a user for the HSTS Node API, which is used for Watch Folders.
+For simplicity, I used node_ibmuser/node_password, but you should not use that. It also associates the
+API user with the user that will be running your transfers (most likely the user you are using to install
+this with in this installation). The last part of the commands sets the ACL for that user.
+```console
+/opt/aspera/bin/asnodeadmin -a -u node_ibmuser -p node_password -x <your_user> --acl-set admin,impersonation
+```
+check it and make sure it worked correctly:
+```console
+sudo /opt/aspera/bin/asnodeadmin -l
+```
+You will see output similar to
+>List of Node API user(s):
+>user          system/transfer       user acls
+>============= ===================== =====================
+>node_ibmuser  root                  [admin,impersonation]
+
+
+Enable Services for Watch Folders and set the user for them:
+```console
+systemctl enable NetworkManager
+systemctl enable NetworkManager-wait-online.service
+/opt/aspera/sbin/asperawatchd --user <your_user>
+/opt/aspera/sbin/asperawatchfolderd --user <your_user>
+systemctl restart asperarund
+```
+
+
+## Set the server name and docroot.
+The docroot is the location the HSTS uses as it's base to store the files you transfer.
+The below commands name the server, create the doc root, set the HSTS to use it, set the,
+transfer user's permissions on it, then reset the aspera services.
+
+```console
+asconfigurator -x "set_server_data;server_name,169.62.1.18"
+mkdir /AsperaDocRoot
+asconfigurator -x "set_node_data;absolute,/AsperaDocRoot"
+asconfigurator -x "set_user_data;user_name,root;read_allowed,true"
+asconfigurator -x "set_user_data;user_name,root;write_allowed,true"
+asconfigurator -x "set_user_data;user_name,root;dir_allowed,true"
+asconfigurator -x "set_user_data;user_name,root;absolute,/AsperaDocRoot"
+
+systemctl restart asperacentral
+systemctl restart asperanoded
+systemctl restart asperahttpd
+```
+
+## Step 6 - Create a conneciton to the server and try a transfer!
+You are done with the install.
+
+Go to one of your Aspera endpoints or another Aspera server and attempt a transfer.
+
+
+
+
+
+
 
 
 
