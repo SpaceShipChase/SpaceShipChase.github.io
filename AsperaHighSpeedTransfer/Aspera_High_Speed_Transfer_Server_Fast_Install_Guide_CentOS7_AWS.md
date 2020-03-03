@@ -1,4 +1,4 @@
-# Fast and Dirty Aspera High Speed Transer Installation on CentOS7
+# Fast and Dirty Aspera High Speed Transfer Server Installation on CentOS7
 This and other guides avaialbe on my website:
 https://spaceshipchase.github.io/
 
