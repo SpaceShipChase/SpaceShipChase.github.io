@@ -69,6 +69,30 @@ body, html {
 <button class="tablink" onclick="openPage('About', this, 'green')">About</button>
 
 <div id="Home" class="tabcontent">
+  
+    <style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  </style>
+  
+<div class="row">
+  <div class="column" style="background-color:#FFFFFF;">
   <h3>What is this site?</h3>
   <p>A place where I post useful information for my customers and share my knowledge.</p>
   <h3>How does it work?</h3>
@@ -77,6 +101,15 @@ body, html {
   <p>Easy! Open a ticket or push a change to the git repository and I will add it after a review!</p>
   <h3>Is anything on here private?</h3>
   <p>Not a chance. This knowledge if for everybody.</p>
+  </div>
+  <div class="column" style="background-color:#EFEEEE;">
+    <h2>Sticky Posts</h2>
+    <a href="./README.md">Aspera Fast Start</a>
+    <p>Some text..</p>
+  </div>
+</div>
+  
+
 </div>
 
 <div id="Blog" class="tabcontent">
