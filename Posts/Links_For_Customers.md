@@ -1,4 +1,4 @@
-#Helping you navigate IBM.
+# Helping you navigate IBM.
 
 IBM has a lot of resources for their customers.
 Not all of them are well publicized or obvious.
@@ -7,7 +7,7 @@ it’s hard to keep up with. I will do my best to keep this
 page up to date for you.
 
 
-##Main support site
+## Main support site
 https://www.ibm.com/support
 
 Go here to find patches, get help, find documentation, and submit issues.
