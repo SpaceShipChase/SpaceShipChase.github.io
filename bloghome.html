@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: 1px solid #AAA;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+
+.header a.logo {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 14px 16px;
+}
+
+#Home {background-color: AliceBlue;}
+#Blog {background-color: AliceBlue;}
+#Contact {background-color: AliceBlue;}
+#About {background-color: AliceBlue;}
+</style>
+
+
+
+
+
+<div class="header">
+  <a class="logo">The Space Ship Chase</a>
+  </div>
+</div>
+
+
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'green')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Blog', this, 'green')" >Blog</button>
+<button class="tablink" onclick="openPage('Contact', this, 'green')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'green')">About</button>
+
+<div id="Home" class="tabcontent">
+  
+    <style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  </style>
+  
+<div class="row">
+  <div class="column" style="background-color:#FFFFFF;">
+  <h3>What is this site?</h3>
+  <p>A place where I post useful information for my customers and share my knowledge.</p>
+  <h3>How does it work?</h3>
+  <p>Most of the content of this site is links to GitHub pages that I author. This allows me to easily add content that others can contribute to.</p>
+  <h3>How do I contribute?</h3>
+  <p>Easy! Open a ticket or push a change to the git repository and I will add it after a review!</p>
+  <h3>Is anything on here private?</h3>
+  <p>Not a chance. This knowledge if for everybody.</p>
+  </div>
+  <div class="column" style="background-color:#EFEEEE;">
+    <h2>Top Posts</h2>
+    <a href=
+       "https://github.com/SpaceShipChase/SpaceShipChase.github.io/blob/master/AsperaHighSpeedTransfer/Aspera_High_Speed_Transfer_Server_Fast_Install_Guide_CentOS7_AWS.md">
+      Aspera Server Fast Start for CentOS7 and AWS</a>
+  </div>
+</div>
+  
+
+</div>
+
+<div id="Blog" class="tabcontent">
+  <h3>Under Construction</h3>
+  <p>Eventually I will make posts here.</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Chase Horvath</h3>
+  <p>Hybrid Cloud Software technical sales specialist for the US Federal market.</p>
+  <p>chase.horvath@ibm.com</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>Work in progress.</h3>
+  <p></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

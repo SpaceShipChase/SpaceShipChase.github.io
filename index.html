@@ -1,152 +1,610 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-
-/* Set height of body and the document to 100% */
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
-}
-
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: 1px solid #AAA;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: black;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
-
-
-.header a.logo {
-  font-size: 40px;
-  font-weight: bold;
-  padding: 14px 16px;
-}
-
-#Home {background-color: AliceBlue;}
-#Blog {background-color: AliceBlue;}
-#Contact {background-color: AliceBlue;}
-#About {background-color: AliceBlue;}
-</style>
-
-
-
-
-
-<div class="header">
-  <a class="logo">The Space Ship Chase</a>
-  </div>
-</div>
-
-
+<meta charset="utf-8">
+<title>Space Ship Chase</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="color/default.css" rel="stylesheet">
+<link rel="shortcut icon" href="img/favicon.ico">
+<!-- =======================================================
+    Theme Name: Maxim
+    Theme URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+======================================================= -->
 </head>
 <body>
-
-<button class="tablink" onclick="openPage('Home', this, 'green')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openPage('Blog', this, 'green')" >Blog</button>
-<button class="tablink" onclick="openPage('Contact', this, 'green')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'green')">About</button>
-
-<div id="Home" class="tabcontent">
-  
-    <style>
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* Create two equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  </style>
-  
-<div class="row">
-  <div class="column" style="background-color:#FFFFFF;">
-  <h3>What is this site?</h3>
-  <p>A place where I post useful information for my customers and share my knowledge.</p>
-  <h3>How does it work?</h3>
-  <p>Most of the content of this site is links to GitHub pages that I author. This allows me to easily add content that others can contribute to.</p>
-  <h3>How do I contribute?</h3>
-  <p>Easy! Open a ticket or push a change to the git repository and I will add it after a review!</p>
-  <h3>Is anything on here private?</h3>
-  <p>Not a chance. This knowledge if for everybody.</p>
-  </div>
-  <div class="column" style="background-color:#EFEEEE;">
-    <h2>Top Posts</h2>
-    <a href=
-       "https://github.com/SpaceShipChase/SpaceShipChase.github.io/blob/master/AsperaHighSpeedTransfer/Aspera_High_Speed_Transfer_Server_Fast_Install_Guide_CentOS7_AWS.md">
-      Aspera Server Fast Start for CentOS7 and AWS</a>
-  </div>
+<!-- navbar -->
+<div class="navbar-wrapper">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<!-- Responsive navbar -->
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+				<h1 class="brand"><a href="index.html">The Space Ship Chase</a></h1>
+				<!-- navigation -->
+				<nav class="pull-right nav-collapse collapse">
+				<ul id="menu-main" class="nav">
+					<li><a title="team" href="#about">Our Story</a></li>
+					<li><a title="services" href="#services">Flavors</a></li>
+					<li><a title="works" href="#works">Adventures</a></li>
+					<li><a title="blog" href="#blog">What's Kombucha</a></li>
+					<li><a title="contact" href="#contact">Contact</a></li>
+					<li><a href="page.html">Blank Page</a></li>
+				</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
 </div>
-  
+<!-- Header area -->
+<div id="header-wrapper" class="header-slider">
+	<header class="clearfix">
+	<div class="logo">
+		<img src="img/logo-image.png" alt="" />
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div id="main-flexslider" class="flexslider">
+					<ul class="slides">
+						<li>
+						<p class="home-slide-content">
+							<strong>Hybrid Cloud</strong> specialist
+						</p>
+						</li>
+						<li>
+						<p class="home-slide-content">
+							Tecnical Blogger
+						</p>
+						</li>
+						<li>
+						<p class="home-slide-content">
+							 <strong>IBM</strong>er
+						</p>
+						</li>
+					</ul>
+				</div>
+				<!-- end slider -->
+			</div>
+		</div>
+	</div>
+	</header>
+</div>
+<!-- spacer section -->
+<section class="spacer green">
+<div class="container">
+	<div class="row">
+		<div class="span6 alignright flyLeft">
+			<blockquote class="large">
+				 My home page with resources for my customers and friends. Knowledge for all.
+			</blockquote>
+		</div>
+		<!--
+		<div class="span6 aligncenter flyRight">
+			<blockquote class="large">
+				 Knowledge for all!
+			</blockquote>
+		</div>
+		-->
+	</div>
+</div>
+</section>
+<!-- end spacer section -->
+
+
+<!-- section: services -->
+<section id="services" class="section orange">
+<div class="container">
+	<h4>What 'ya looking for?</h4>
+	<!-- Four columns -->
+	<div class="row">
+		<div class="span3 animated-fast flyIn">
+			<div class="service-box">
+				<a href="bloghome.html"><img src="img/icons/laptop.png" alt="" />
+				<h2>Blog Posts</h2>
+				<p>
+					 Mostly Git documents I publish with useful info.
+				</p>
+			</div>
+		</div>
+		<div class="span3 animated flyIn">
+			<div class="service-box">
+				<img src="img/icons/lab.png" alt="" />
+				<h2>Resources for IBM Customers</h2>
+				<p>
+					 A general welcome package for my IBM customers.
+				</p>
+			</div>
+		</div>
+		<div class="span3 animated-fast flyIn">
+			<div class="service-box">
+				<img src="img/icons/camera.png" alt="" />
+				<h2>IBM Related Videos</h2>
+				<p>
+					 My YouTube Playlist
+				</p>
+			</div>
+		</div>
+		<!--
+		<div class="span3 animated-slow flyIn">
+			<div class="service-box">
+				<img src="img/icons/basket.png" alt="" />
+				<h2>Matcha Party</h2>
+				<p>
+					 Matcha + Mint<br>Remember Mario Party? Throw in the sick beats from Knife Party. Its like that.
+				</p>
+			</div>
+		</div>
+		-->
+	</div>
+</div>
+</section>
+<!-- end section: services --> 
+
+
+
+
+
+<!-- section: team -->
+<section id="about" class="section">
+<div class="container">
+	<h4>Who We Are</h4>
+	<div class="row">
+		<div class="span4 offset1">
+			<div>
+				<h2>We wanted <strong>more</strong></h2>
+				<p>
+				Well, we're the two guys.. Chase Horvath and Matthew Cass proudly brew'n Two Guys Kombucha in Charleston, SC. We needed a healthy and powerful beverage to fuel our sometimes ridiculous surfing habit; this stuff had to get us amped to surf hurricane waves bruh. We had been brewing Kombucha, and looked at eachother and said -- hey lets crank this stuff up and throw some energy supplements in it. It freaking worked! Two Guys Kombucha was born, and now you too can slay your day.
+				</p>
+			</div>
+		</div>
+		<div class="span6">
+			<div class="aligncenter">
+				<img src="img/icons/creativity.png" alt="" />
+				<br>Surfboard + Kombucha Image here
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span2 offset1 flyIn">
+			<div class="people">
+				<img class="team-thumb img-circle" src="img/team/img-1.jpg" alt="" />
+				<h3>Chase Horvath</h3>
+				<p>
+					El Capitan
+				</p>
+			</div>
+		</div>
+		<div class="span2 flyIn">
+			<div class="people">
+				<img class="team-thumb img-circle" src="img/team/img-2.jpg" alt="" />
+				<h3>Matt Cass</h3>
+				<p>
+					No, I'm the Captain
+				</p>
+			</div>
+		</div>
+		<div class="span2 flyIn">
+			<div class="people">
+				<img class="team-thumb img-circle" src="img/team/img-3.jpg" alt="" />
+				<h3>A goat</h3>
+				<p>
+					Doesn't Actually Exist
+				</p>
+			</div>
+		</div>
+		<div class="span2 flyIn">
+			<div class="people">
+				<img class="team-thumb img-circle" src="img/team/img-4.jpg" alt="" />
+				<h3>Some Surfboards</h3>
+				<p>
+					Inspiration
+				</p>
+			</div>
+		</div>
+		<div class="span2 flyIn">
+			<div class="people">
+				<img class="team-thumb img-circle" src="img/team/img-5.jpg" alt="" />
+				<h3>Charleston</h3>
+				<p>
+					Flavortown
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.container -->
+</section>
+<!-- end section: team -->
+
+
+<!-- section: works -->
+<section id="works" class="section">
+<div class="container clearfix">
+	<h4>Two Guys Adventures</h4>
+	<!-- portfolio filter -->
+	<div class="row">
+		<div id="filters" class="span12">
+			<ul class="clearfix">
+				<li><a href="#" data-filter="*" class="active">
+				<h5>All</h5>
+				</a></li>
+				<li><a href="#" data-filter=".web">
+				<h5>Kombucha</h5>
+				</a></li>
+				<li><a href="#" data-filter=".print">
+				<h5>Events</h5>
+				</a></li>
+				<li><a href="#" data-filter=".design">
+				<h5>Process</h5>
+				</a></li>
+				<li><a href="#" data-filter=".photography">
+				<h5>Slayin</h5>
+				</a></li>
+			</ul>
+		</div>
+		<!-- END PORTFOLIO FILTERING -->
+	</div>
+	<div class="row">
+		<div class="span12">
+			<div id="portfolio-wrap">
+				<!-- portfolio item -->
+				<div class="portfolio-item grid print photography">
+					<div class="portfolio">
+						<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+						<img src="img/works/1.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Portfolio name</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- portfolio item -->
+				<div class="portfolio-item grid print design web">
+					<div class="portfolio">
+						<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+						<img src="img/works/2.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Portfolio name</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- portfolio item -->
+				<div class="portfolio-item grid print design">
+					<div class="portfolio">
+						<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+						<img src="img/works/3.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Portfolio name</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- portfolio item -->
+				<div class="portfolio-item grid photography web">
+					<div class="portfolio">
+						<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+						<img src="img/works/4.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Portfolio name</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- portfolio item -->
+				<div class="portfolio-item grid photography web">
+					<div class="portfolio">
+						<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+						<img src="img/works/5.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Portfolio name</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- portfolio item -->
+				<div class="portfolio-item grid photography web">
+					<div class="portfolio">
+						<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+						<img src="img/works/6.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Portfolio name</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- portfolio item -->
+				<div class="portfolio-item grid photography web">
+					<div class="portfolio">
+						<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+						<img src="img/works/7.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Portfolio name</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- portfolio item -->
+				<div class="portfolio-item grid photography">
+					<div class="portfolio">
+						<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+						<img src="img/works/8.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Portfolio name</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- portfolio item -->
+				<div class="portfolio-item grid photography web">
+					<div class="portfolio">
+						<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+						<img src="img/works/9.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Portfolio name</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- portfolio item -->
+				<div class="portfolio-item grid design web">
+					<div class="portfolio">
+						<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
+						<img src="img/works/10.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Portfolio name</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<!-- spacer section -->
+<section class="spacer bg3">
+<div class="container">
+	<div class="row">
+		<div class="span12 aligncenter flyLeft">
+			<blockquote class="large">
+				 We are committed to craft simple, natural, & quality Kombucha that keeps the body happy and mind energized.
+			</blockquote>
+		</div>
+		<div class="span12 aligncenter flyRight">
+			<i class="icon-glass icon-10x"></i>
+		</div>
+	</div>
+</div>
+</section>
+<!-- end spacer section -->
+<!-- section: blog -->
+<section id="blog" class="section">
+<div class="container">
+	<h4>What's Kombucha?</h4>
+	<!-- Three columns -->
+	<div class="row">
+		<div class="span3">
+			<div class="home-post">
+				<div class="post-image">
+					<img class="max-img" src="img/blog/img1.jpg" alt="" />
+				</div>
+				<div class="post-meta">
+					<i class="icon-file icon-2x"></i>
+					<span class="date">October 8, 2017</span>
+					<span class="tags"><a href="#">What</a>, <a href="#">Jibba</a></span>
+				</div>
+				<div class="entry-content">
+					<h5><strong><a href="#">What is Kombucha</a></strong></h5>
+					<p>
+						Ancient Manchurian Awesome Juice &hellip;
+					</p>
+					<a href="#" class="more">Read more</a>
+				</div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="home-post">
+				<div class="post-image">
+					<img class="max-img" src="img/blog/img2.jpg" alt="" />
+				</div>
+				<div class="post-meta">
+					<i class="icon-file icon-2x"></i>
+					<span class="date">June 19, 2013</span>
+					<span class="tags"><a href="#">Design</a>, <a href="#">News</a></span>
+				</div>
+				<div class="entry-content">
+					<h5><strong><a href="#">Retro is great</a></strong></h5>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
+					</p>
+					<a href="#" class="more">Read more</a>
+				</div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="home-post">
+				<div class="post-image">
+					<img class="max-img" src="img/blog/img3.jpg" alt="" />
+				</div>
+				<div class="post-meta">
+					<i class="icon-file icon-2x"></i>
+					<span class="date">June 22, 2013</span>
+					<span class="tags"><a href="#">Design</a>, <a href="#">Tips</a></span>
+				</div>
+				<div class="entry-content">
+					<h5><strong><a href="#">Isometric mockup</a></strong></h5>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
+					</p>
+					<a href="#" class="more">Read more</a>
+				</div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="home-post">
+				<div class="post-image">
+					<img class="max-img" src="img/blog/img4.jpg" alt="" />
+				</div>
+				<div class="post-meta">
+					<i class="icon-file icon-2x"></i>
+					<span class="date">June 27, 2013</span>
+					<span class="tags"><a href="#">News</a>, <a href="#">Tutorial</a></span>
+				</div>
+				<div class="entry-content">
+					<h5><strong><a href="#">Free icon set</a></strong></h5>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
+					</p>
+					<a href="#" class="more">Read more</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="blankdivider30"></div>
+	<div class="aligncenter">
+		<a href="#" class="btn btn-large btn-theme">More blog post</a>
+	</div>
+</div>
+</section>
+
+<section id="contact" class="section green">
+<div class="container">
+	<h4>Get in Touch</h4>
+	<p>
+		 Reque facer nostro et ius, cu persius mnesarchum disputando eam, clita prompta et mel vidisse phaedrum pri et. Facilisis posidonium ex his. Mutat iudico vis in, mea aeque tamquam scripserit an, mea eu ignota viderer probatus. Lorem legere consetetur ei eum. Sumo aeque assentior te eam, pri nominati posidonium consttuam
+	</p>
+	<div class="blankdivider30">
+	</div>
+
+<!---
+	<div class="row">
+		<div class="span12">
+			<div class="cform" id="contact-form">
+				<div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+				<form action="" method="post" role="form" class="contactForm">
+					<div class="row">
+						<div class="span6">
+							<div class="field your-name form-group">
+								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validation"></div>
+							</div>
+							<div class="field your-email form-group">
+								<input type="text" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validation"></div>
+							</div>
+							<div class="field subject form-group">
+								<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validation"></div>
+							</div>
+						</div>
+						<div class="span6">
+							<div class="field message form-group">
+								<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                <div class="validation"></div>
+							</div>
+							<input type="submit" value="Send message" class="btn btn-theme pull-left">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- ./span12 -->
+<!--- --->
+	</div>
 
 </div>
-
-<div id="Blog" class="tabcontent">
-  <h3>Under Construction</h3>
-  <p>Eventually I will make posts here.</p>
+</section>
+<footer>
+<div class="container">
+	<div class="row">
+		<div class="span6 offset3">
+			<ul class="social-networks">
+				<li><a href="#"><i class="icon-circled icon-bgdark icon-instagram icon-2x"></i></a></li>
+				<li><a href="#"><i class="icon-circled icon-bgdark icon-twitter icon-2x"></i></a></li>
+				<li><a href="#"><i class="icon-circled icon-bgdark icon-dribbble icon-2x"></i></a></li>
+				<li><a href="#"><i class="icon-circled icon-bgdark icon-pinterest icon-2x"></i></a></li>
+			</ul>
+			<p class="copyright">
+			
+                <div class="credits">
+                   
+                    -->
+                    <a href="https://bootstrapmade.com/">Web Template by BootstrapMade.com</a>
+                </div>
+			</p>
+		</div>
+	</div>
 </div>
-
-<div id="Contact" class="tabcontent">
-  <h3>Chase Horvath</h3>
-  <p>Hybrid Cloud Software technical sales specialist for the US Federal market.</p>
-  <p>chase.horvath@ibm.com</p>
-</div>
-
-<div id="About" class="tabcontent">
-  <h3>Work in progress.</h3>
-  <p></p>
-</div>
-
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+<!-- ./container -->
+</footer>
+<a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bgdark icon-2x"></i></a>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.localScroll.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/inview.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script src="contactform/contactform.js"></script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55234356-4', 'auto');
+    ga('send', 'pageview');
 </script>
-   
 </body>
-</html> 
+</html>
