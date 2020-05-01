@@ -1,6 +1,4 @@
 # Fast and Dirty Aspera High Speed Transfer Server Installation on CentOS7
-This and other guides avaialbe on my website:
-https://spaceshipchase.github.io/
 
 Want to try Aspera in your environment quickly? This guide gives the commands
 for a very basic installation. It is not meant for a produciton install. It
@@ -33,6 +31,7 @@ You can also point the HSTS to store data in S3 or another storage option. Guide
 
 
 ## Step 3 - Configure SSH access, firewall, change SSH port, disable SELinux, restart.
+Note: SELinux is not a barrier to Aspera.
 
 SSH into your VM.
 
