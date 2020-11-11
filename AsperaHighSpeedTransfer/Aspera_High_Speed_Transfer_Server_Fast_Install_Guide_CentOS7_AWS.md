@@ -152,7 +152,6 @@ asconfigurator -x "set_user_data;user_name,root;absolute,/AsperaDocRoot"
 
 systemctl restart asperacentral
 systemctl restart asperanoded
-systemctl restart asperahttpd
 ```
 
 ## Step 7 - Create a conneciton to the server and try a transfer!
